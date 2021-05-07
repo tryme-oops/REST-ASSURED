@@ -27,7 +27,7 @@ public class Basic1 {
 		// adding a place
 		
 		String response = given().log().all().queryParam("key", "quackick123").header("Content-Type", "application/json")
-		.body(Payload.Addplace())
+		.body(Payload.Addplace())   //called this method from payload file
 		.when().post("maps/api/place/add/json")
 		.then().assertThat().log().all().statusCode(200).body("scope", equalTo("APP")).extract().response().asString();
 
