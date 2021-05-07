@@ -63,7 +63,7 @@ public class Basic1 {
 		.then().assertThat().log().all().statusCode(200).extract().response().asString();
 		
 	
-		JsonPath js1 = new JsonPath(getPlaceResponse);  //parsing the Json  //error line
+		JsonPath js1 = new JsonPath(getPlaceResponse);     //parsing the Json  //error line
 		String actualAddress = js1.getString("address");
 		System.out.println(actualAddress);
 		
